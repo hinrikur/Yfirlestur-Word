@@ -1,16 +1,54 @@
-# Microsoft Word spelling and grammar add-on for Icelandic
+# Microsoft Word spelling and grammar add-in for Icelandic
 
-This repo contains the source code for *Yfirlestur Word*, a spelling and grammar correction add-on for Icelandic, for use with Microsoft Word.
+This repo contains the source code for *Yfirlestur Word*, a spelling and grammar correction add-in for Icelandic, for use with Microsoft Word.
 
 *Yfirlestur Word* was developed and tested using the [Yfirlestur.is](https://yfirlestur.is/) public API for spelling and grammar correction, which was owned and operated by [Miðeind ehf.](https://mideind.is/). 
+
+## Installation
+
+### Prerequisites 
+
+- Make sure you're running at least [Node.js](https://nodejs.org/en/download/) v10 and `npm` v6.
+
+- You'll need to have [Microsoft Word](https://www.microsoft.com/en-ww/microsoft-365/word) installed on your machine.
+
+- *Yfirlestur Word* requires an external backend for performing the spelling and grammar correction. During development, the [Yfirlestur.is](https://yfirlestur.is/) public API was used. The API is owned and operated by [Miðeind ehf.](https://mideind.is/) 
+
+
+### Getting started
+
+Clone the repo and install the dependencies.
+
+```bash
+git clone https://github.com/hinrikur/Yfirlestur-Word.git
+cd Yfirlestur-Word
+npm install
+```
+
+**Note:** If you're testing your add-in on Mac, run the following command before proceeding. When you run this command, the local web server starts.
+
+```bash
+npm run dev-server
+```
+
+To run the add-in locally, run the following command in the root directory of the add-in
+
+```bash
+npm start
+```
+
+
+
+
+### Trying it out
+
+In Word, open a new document, choose the Home tab, and then choose the *Yfirlestur fyrir íslensku* button in the ribbon to open the add-in task pane.
 
 ## Acknowledgements
 
 - University of Iceland
 
 This project was funded (partly) by the Language Technology Programme for Icelandic 2019-2023. The programme, which is managed and coordinated by [Almannarómur](https://almannaromur.is/), is funded by the Icelandic Ministry of Education, Science and Culture.
-
-This Google Docs add-on uses the [React Google Apps Script](https://github.com/enuchi/React-Google-Apps-Script) boilerplate to integrate [ReactJS](https://reactjs.org/) into native Google Apps Script functionality.
 
 ## License
 
